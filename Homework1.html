@@ -160,6 +160,22 @@
         <p>
             Coded by Shravanthi Budhi
         </p>
+        <script>
+        function changeCity() {
+        let newCity = prompt("What city do you live in?");
+        let newTemp = prompt("What temperature is it?");
+        let newHeading = document.querySelector("h1");
+        if (newTemp < 0) {
+          newHeading.innerHTML =
+            "😭<br />Currently " + newTemp + "°C in " + newCity;
+        } else {
+          newHeading.innerHTML =
+            "😌<br />Currently " + newTemp + "°C in " + newCity;
+        }
+      }
+      let changeButton = document.querySelector("button");
+      changeButton.addEventListener("click", changeCity);
+    </script>
     </div>
 </body>
 </html>
